@@ -1,4 +1,4 @@
-# Introduction to Machine Learning: Forest Fire Prediction
+# Introduction to Machine Learning: Predict class of Economic losses caused by Forest Fire
 Authors:<br>
 Neeraj Kumar<br>
 Saiteja Pottanigari<br>
