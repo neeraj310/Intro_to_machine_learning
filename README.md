@@ -1,4 +1,4 @@
-# DLfM Group Project: Brand Management
+# Introduction to Machine Learning: Forest Fire Prediction
 Authors:<br>
 Neeraj Kumar<br>
 Saiteja Pottanigari<br>
