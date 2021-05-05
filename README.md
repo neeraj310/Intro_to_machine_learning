@@ -26,19 +26,19 @@ Dataset description: The data is compiled from forest fires classified according
 Number of samples: 500
 Number of features: 13 (numeric and strings) + one column of class labels (0,1,2)
 Features description:
-    fwi: Fire weather index
-    humidity: Absolute humidity in g/m3
-    region: region
-    dc: Drought code
-    wind: Average wind speed in km/h
-    month: Month of the year at start
-    area: Burned area in km2
-    rain: Outside rain in mm/m2
-    nr_firefighters: Number of firefighters employed per day
-    severity_rating: severity_rating
-    temperature: Temperature in Celsius degree
-    fire_id: Fire ID
-    duration: Month till extinguishment
-    class: Economic losses (0 = low, 1 = medium, 2 = high) <--- LABEL TO PREDICT
+    - fwi: Fire weather index
+    - humidity: Absolute humidity in g/m3
+    - region: region
+    - dc: Drought code
+    - wind: Average wind speed in km/h
+    - month: Month of the year at start
+    - area: Burned area in km2
+    - rain: Outside rain in mm/m2
+    - nr_firefighters: Number of firefighters employed per day
+    - severity_rating: severity_rating
+    - temperature: Temperature in Celsius degree
+    - fire_id: Fire ID
+    - duration: Month till extinguishment
+    - class: Economic losses (0 = low, 1 = medium, 2 = high) <--- LABEL TO PREDICT
 
 
