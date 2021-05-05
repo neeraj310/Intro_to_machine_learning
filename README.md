@@ -24,7 +24,9 @@ For current problem, we are choosing One Vs Rest approach because of two reasons
 Dataset description: The data is compiled from forest fires classified according to the economic losses that they caused. There are thirteen different features associated with each fire. The goal is to predict the economic losses range (feature "class") from the other features.
 
 Number of samples: 500
+
 Number of features: 13 (numeric and strings) + one column of class labels (0,1,2)
+
 Features description:
     - fwi: Fire weather index
     - humidity: Absolute humidity in g/m3
