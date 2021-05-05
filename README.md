@@ -25,9 +25,10 @@ Dataset description: The data is compiled from forest fires classified according
 
 Number of samples: 500
 
-Number of features: 13 (numeric and strings) + one column of class labels (0,1,2)
+Number of features: 13 (numeric and strings) + one column of class labels (0,1,2
 
 Features description:
+
     - fwi: Fire weather index
     - humidity: Absolute humidity in g/m3
     - region: region
