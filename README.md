@@ -1,37 +1,44 @@
-# Introduction to Machine Learning Project: Brand Management
+# DLfM Group Project: Brand Management
 Authors:<br>
-Linda Samsinger<br>
-Theebana Rajendram<br>
 Neeraj Kumar<br>
-Vincent Rüegge<br>
-
-## Project Description
-The goal of this project is to replicate another project called 'Visual Listening' that compares how brands are perceived via images found on social media. In our project, the target is to build a webtool where the user can enter a brand, for example 'swatch', and receive a webpage that analysis swatch-images - found on Instagram on either the official swatch user-profile or as #swatch hashtag on images from different users - and displays, for each attribute ('glamourous', 'rugged', 'healthy' or 'fun'), the number of images classified as such.
-
-## Getting Started
-What things you need to install the software and how to install them
-
-```
-to download images from Flickr, you need to install
-- Linux on Windows
-- Java on Linux
-```
-```
-to feed the model, unzip the models savemodels.7z
-- 7z free download
-```
-### Prerequisites
-Install all the dependencies with either pip or conda. Make sure to install tensorflow version 1.15.0.
+Saiteja Pottanigari<br>
 
 
-### Installing
-Open the code in your IDE (e.g. PyCharm). For PyCharm, install a Python interpreter and add a configuration pointing to the main.py file.
+## Problem statement
+Predict class of Economic losses caused by Forest Fires using SVM, Random Forest, MLP and Logistics regression. Economic losses have been categorized into 3 classes: 0, 1, 2 and we want to predict the output class based on the dataset features. As Forest fires effects economics loss of any country in the world, building a model which takes features of forest fires and predicting how much it will effect the economic and let the government be ready for the range of impact either it is high or medium or low.
 
-## Project Structure
-### src
-Contains all relevant scripts for:
-- model training / testing (Python)
-- Flask Webapp environment (Python, HTML, CSS)
+## Multiclass Problem
+As it is a multiclass problem with output label holding 3 classes(0, 1, 2). We can take 2 approaches for solving this problem
 
-### about_me
-Contains relevant papers and documents to further facilitate project understanding
+## One Vs Rest (One Vs All)
+Here we use mulitple binary classifer which is compare each class with rest of the classes available being one label. Decision rule:Predict class label with the highest probability. Requires n classifiers if n number of classes exist.
+
+## One Vs One
+In this we have to train binary classifier for each class pair. Decision rule:Score for output a data item towards one class, combines all classifier's probability involving this class in the class pairs. Requires nC2 classfiers if n number of classes exist.
+
+For current problem, we are choosing One Vs Rest approach because of two reasons a) Dataset is limited (500 samples) so we want to use all samples for each classifier. b) Number of classes are limited to 3, so number of classifiers will be same in both cases.
+
+# Brief Description of Dataset
+
+## FOREST FIRES DATASET
+Dataset description: The data is compiled from forest fires classified according to the economic losses that they caused. There are thirteen different features associated with each fire. The goal is to predict the economic losses range (feature "class") from the other features.
+
+Number of samples: 500
+Number of features: 13 (numeric and strings) + one column of class labels (0,1,2)
+Features description:
+    fwi: Fire weather index
+    humidity: Absolute humidity in g/m3
+    region: region
+    dc: Drought code
+    wind: Average wind speed in km/h
+    month: Month of the year at start
+    area: Burned area in km2
+    rain: Outside rain in mm/m2
+    nr_firefighters: Number of firefighters employed per day
+    severity_rating: severity_rating
+    temperature: Temperature in Celsius degree
+    fire_id: Fire ID
+    duration: Month till extinguishment
+    class: Economic losses (0 = low, 1 = medium, 2 = high) <--- LABEL TO PREDICT
+
+
